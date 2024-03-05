@@ -1,0 +1,14 @@
+// .cursorContainer {
+//     position: fixed;
+//     pointer-events: none;
+//     z-index: 9999;
+//   }
+.cursor{
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100;
+}
