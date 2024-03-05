@@ -3,12 +3,14 @@ import MagneticButton from './MagneticButton'
 import HorizontalScroll from './HorizontalScroll'
 import HorizontalScroll3d from './HorizontalScroll3d'
 import '../../App.css'
+import MaskCursor from './MaskCursor/MaskCursor'
 
 function Effects() {
   return (
     <>
         {/* <HorizontalScroll/> */}
-        {/* <HorizontalScroll3d/> */}
+
+        <HorizontalScroll3d/>
         <div className="magneticContainer">
           <h3>Magnetic Button Effect</h3>
           <div className="buttonWrapper">
@@ -26,6 +28,7 @@ function Effects() {
             </MagneticButton>
           </div>
         </div>
+        <MaskCursor/>
     </>
   )
 }

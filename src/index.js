@@ -17,10 +17,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
-  {
-    path: "/transitions",
-    element: <SVGDraw />,
-  },
+  // {
+  //   path: "/transitions",
+  //   element: <SVGDraw />,
+  // },
   {
     path: "/animations",
     element: <SVGDraw />,
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
 ]);
 export const routes = {
   "/": "Home",
-  "/transitions": "Transitions",
+  // "/transitions": "Transitions",
   "/animations": "Animations",
   "/effects": "Effects"
 }

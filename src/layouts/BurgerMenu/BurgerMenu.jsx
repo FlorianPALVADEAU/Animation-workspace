@@ -63,7 +63,7 @@ const BurgerMenu = forwardRef(function Index(props, ref) {
                             <span></span>
                             <ul>
                                 <MagneticButton disableCursorResize><li><a href="/">Home</a></li></MagneticButton>
-                                <MagneticButton disableCursorResize><li><a href="/transitions">Transitions</a></li></MagneticButton>
+                                {/* <MagneticButton disableCursorResize><li><a href="/transitions">Transitions</a></li></MagneticButton> */}
                                 <MagneticButton disableCursorResize><li><a href="/animations">Animations</a></li></MagneticButton>
                                 <MagneticButton disableCursorResize><li><a href="/effects">Effects</a></li></MagneticButton>
                             </ul>
