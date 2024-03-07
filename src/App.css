@@ -89,6 +89,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 100;
 }
 .overlay .menu ul {
   width: auto;
@@ -165,6 +166,124 @@
   z-index: 100;
 }
 
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.content .skeletonContainer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 50vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.content .skeletonContainer .skeletonComponentWrapper,
+.content .skeletonContainer .componentWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .skeletonContainer .skeletonComponentWrapper .skeletonImage,
+.content .skeletonContainer .skeletonComponentWrapper .image,
+.content .skeletonContainer .componentWrapper .skeletonImage,
+.content .skeletonContainer .componentWrapper .image {
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+}
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentContent,
+.content .skeletonContainer .skeletonComponentWrapper .componentContent,
+.content .skeletonContainer .componentWrapper .skeletonComponentContent,
+.content .skeletonContainer .componentWrapper .componentContent {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentContent .skeletonComponentTitle,
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentContent .componentTitle,
+.content .skeletonContainer .skeletonComponentWrapper .componentContent .skeletonComponentTitle,
+.content .skeletonContainer .skeletonComponentWrapper .componentContent .componentTitle,
+.content .skeletonContainer .componentWrapper .skeletonComponentContent .skeletonComponentTitle,
+.content .skeletonContainer .componentWrapper .skeletonComponentContent .componentTitle,
+.content .skeletonContainer .componentWrapper .componentContent .skeletonComponentTitle,
+.content .skeletonContainer .componentWrapper .componentContent .componentTitle {
+  width: 50%;
+  font-size: 40px;
+  min-height: 40px;
+  margin-bottom: 30px;
+  border-radius: 7px;
+}
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentContent .skeletonComponentText,
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentContent .componentText,
+.content .skeletonContainer .skeletonComponentWrapper .componentContent .skeletonComponentText,
+.content .skeletonContainer .skeletonComponentWrapper .componentContent .componentText,
+.content .skeletonContainer .componentWrapper .skeletonComponentContent .skeletonComponentText,
+.content .skeletonContainer .componentWrapper .skeletonComponentContent .componentText,
+.content .skeletonContainer .componentWrapper .componentContent .skeletonComponentText,
+.content .skeletonContainer .componentWrapper .componentContent .componentText {
+  width: 100%;
+  min-height: 20px;
+  max-height: 50%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentContent .skeletonComponentButton,
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentContent .componentButton,
+.content .skeletonContainer .skeletonComponentWrapper .componentContent .skeletonComponentButton,
+.content .skeletonContainer .skeletonComponentWrapper .componentContent .componentButton,
+.content .skeletonContainer .componentWrapper .skeletonComponentContent .skeletonComponentButton,
+.content .skeletonContainer .componentWrapper .skeletonComponentContent .componentButton,
+.content .skeletonContainer .componentWrapper .componentContent .skeletonComponentButton,
+.content .skeletonContainer .componentWrapper .componentContent .componentButton {
+  width: 30%;
+  min-height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 0;
+  margin-top: 30px;
+  background-color: #cfcfcf;
+}
+.content .skeletonContainer .skeletonComponentWrapper .skeletonImage,
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentTitle,
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentText,
+.content .skeletonContainer .skeletonComponentWrapper .skeletonComponentButton,
+.content .skeletonContainer .componentWrapper .skeletonImage,
+.content .skeletonContainer .componentWrapper .skeletonComponentTitle,
+.content .skeletonContainer .componentWrapper .skeletonComponentText,
+.content .skeletonContainer .componentWrapper .skeletonComponentButton {
+  background: rgba(130, 130, 130, 0.2);
+  background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(130, 130, 130, 0.2)), color-stop(18%, rgba(130, 130, 130, 0.3)), color-stop(33%, rgba(130, 130, 130, 0.2)));
+  background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+  background-size: 1200px 100px;
+  animation: wave-lines 2s infinite forwards;
+}
+
+@keyframes wave-lines {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -298,7 +417,7 @@ header .cta .arrow {
   background-color: #f1f1f1;
   z-index: 99;
   position: absolute;
-  left: 75.1vw;
+  left: 76vw;
 }
 .racesWrapper .races {
   height: 100vh;
@@ -472,4 +591,4 @@ header .cta .arrow {
   mix-blend-mode: difference;
 }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=App.css.map */

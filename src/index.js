@@ -10,17 +10,12 @@ import App from './App';
 import { AnimatePresence } from 'framer-motion'
 import PageTransition from './pages/transitions/PageTransition/PageTransition';
 import AppTest from './AppTest';
-import CursorProvider from './utils/CursorProvider';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
-  // {
-  //   path: "/transitions",
-  //   element: <SVGDraw />,
-  // },
   {
     path: "/animations",
     element: <SVGDraw />,
@@ -47,10 +42,10 @@ root.render(
     <AnimatePresence mode='wait'>
       {/* <CursorProvider> */}
         <PageTransition>
-          <Layouts>
+          {/* <Layouts> */}
             <RouterProvider router={router}>
             </RouterProvider>
-          </Layouts>
+          {/* </Layouts> */}
         </PageTransition>
       {/* </CursorProvider> */}
     </AnimatePresence>
